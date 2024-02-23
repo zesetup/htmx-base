@@ -13,14 +13,14 @@ public class Controller {
     return "index";
   }
 
-  @GetMapping({"/space/"})
+  @GetMapping({"space/"})
   public String hello(@RequestParam(value = "username", required = true) String userName,
       Model model) {
     model.addAttribute("username", userName);
     return "space";
   }
 
-  @GetMapping({"/validate-username/"})
+  @GetMapping({"validate-username/"})
   public String validateUserId(
       @RequestParam(value = "username", required = false) String userName) {
     if (userName == null || userName.isEmpty()) {

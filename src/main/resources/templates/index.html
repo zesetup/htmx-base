@@ -20,10 +20,10 @@
   <div style="width:40%;margin:0px auto;text-align:center">
     <p style="width: 400px;text-align: center" th:text="${message}"></p>
     <div hx-swap="outerHTML" id="results">
-      <form hx-get="/space/" hx-target="#results" style="width:400px">
+      <form hx-get="space/" hx-target="#results" style="width:400px">
         <fieldset>
           <h1>Please enter your name</h1>
-          <input hx-trigger="keyup changed delay:500ms" hx-get="/validate-username/" hx-target="#next-button"
+          <input hx-trigger="keyup changed delay:500ms" hx-get="validate-username/" hx-target="#next-button"
               id="userId" name="username" value=""  type="text" min="1"  max="20000">
           <button type="submit" disabled id="next-button">Next</button>
         </fieldset>
